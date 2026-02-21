@@ -1,63 +1,66 @@
-````markdown
-# 🚀 Nama Proyek Anda
+# 🚀 NestJS and Next.js Authentication and Authorization
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Status](https://img.shields.io/badge/Status-Active-brightgreen.svg)]()
 
-Full Stack NestJS and Next.js application with authentication and posts.
+Full Stack NestJS and Next.js application with authentication and authorization.
 
-## ✨ Fitur Utama
+## ✨ Main Features
 
-- ⚡ **Performa Tinggi**: Dioptimalkan untuk kecepatan dan efisiensi sumber daya.
-- 🛡️ **Keamanan**: Mengikuti standar praktik keamanan industri terbaru.
-- 📱 **Responsif**: Pengalaman pengguna yang mulus di perangkat mobile maupun desktop.
-- 🛠️ **Mudah Dikonfigurasi**: Struktur kode yang bersih dan dokumentasi yang lengkap.
+- ⚡ **High Performance**: Optimized for speed and resource efficiency.
+- 🛡️ **Security**: Follows the latest industry security best practices.
+- 📱 **Responsive**: Seamless user experience on mobile and desktop devices.
+- 🛠️ **Easy to Configure**: Clean code structure and comprehensive documentation.
 
-## 🛠️ Teknologi yang Digunakan
+## 🛠️ Technologies Used
 
 - **NodeJS, TypeScript**
 - **NextJS, NestJS, TailwindCSS**
 - **SQLITE**
 
-## 🚀 Memulai
+## 🚀 Getting Started
 
-### Prasyarat
+### Prerequisites
 
-Pastikan Anda telah menginstal perangkat lunak berikut di mesin lokal Anda:
+Make sure you have the following software installed on your local machine:
 
-- [Node.js](https://nodejs.org/) (Versi LTS)
+- [Node.js](https://nodejs.org/) (LTS Version)
 - [Git](https://git-scm.com/)
 
-### Instalasi
+### Installation
 
-1. Clone repositori ini:
+1. Clone this repository:
+
    ```bash
    git clone https://github.com/izhal27/nestjs-nextjs-auth.git
    ```
-````
 
-2. Masuk ke direktori proyek:
+2. Enter the project directory:
    ```bash
    cd nestjs-nextjs-auth
    ```
-3. Instal dependensi di backend dan frontend:
+3. Install dependencies in the backend and frontend:
    ```bash
    npm install
    ```
-4. Salin file konfigurasi lingkungan:
+4. Install dependencies in the root directory:
+   ```bash
+   npm install
+   ```
+5. Copy the environment configuration file:
    ```bash
    cp .env.example .env
    ```
-5. Jalankan aplikasi dalam mode pengembangan:
+6. Run the application in development mode:
    ```bash
    npm run dev
    ```
 
-## 📄 Lisensi
+## 📄 License
 
-Proyek ini dilisensikan di bawah Lisensi MIT - lihat file [LICENSE](LICENSE) untuk detailnya.
+This project is licensed under the MIT License - see [LICENSE](LICENSE) file for details.
 
-## 👤 Penulis
+## 👤 Author
 
-- **Risal Walangadi** - [@username](https://github.com/izhal27)
+- **Risal Walangadi** - [@izhal27](https://github.com/izhal27)
 - LinkedIn - [Risal Walangadi](https://www.linkedin.com/in/risal-walangadi/)
