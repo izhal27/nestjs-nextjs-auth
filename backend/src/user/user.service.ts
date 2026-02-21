@@ -1,4 +1,4 @@
-import { Injectable, UnauthorizedException } from '@nestjs/common';
+import { Injectable } from '@nestjs/common';
 import { Prisma, User } from '../generated/prisma/client';
 import { PrismaService } from '../prisma/prisma.service';
 
@@ -12,10 +12,6 @@ export class UserService {
     const user = await this.prisma.user.findUnique({
       where: userWhereUniqueInput,
     });
-
-    if (!user) {
-      throw new UnauthorizedException('User not found');
-    }
 
     return user;
   }

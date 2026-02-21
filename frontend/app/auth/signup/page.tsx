@@ -1,4 +1,5 @@
 "use client";
+import { apiClient } from "@/lib/api-client";
 import { Loader2, Lock, Mail, User } from "lucide-react";
 import { signIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
@@ -18,19 +19,15 @@ export default function SignUpPage() {
     setError(null);
 
     try {
-      const res = await fetch("/api/auth/signup", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, email, password }),
-      });
-
-      const data = await res.json().catch(() => ({}));
-
-      if (!res.ok) {
-        setError(data?.message || "Terjadi kesalahan saat mendaftar.");
-        setLoading(false);
-        return;
-      }
+      await apiClient.post(
+        "/auth/signup",
+        {
+          name,
+          email,
+          password,
+        },
+        { skipAuth: true },
+      );
 
       // auto sign in after successful signup
       const signInRes = await signIn("credentials", {
@@ -51,10 +48,11 @@ export default function SignUpPage() {
         return;
       }
 
-      router.replace("/");
-    } catch (err) {
+      router.replace("/dashboard");
+    } catch (err: any) {
       setLoading(false);
-      setError("Terjadi kesalahan jaringan.");
+      console.log(err);
+      setError(err?.message || "Terjadi kesalahan jaringan.");
     }
   };
 

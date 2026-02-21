@@ -13,7 +13,7 @@ export class SignupDto {
 
   @IsOptional()
   @IsString()
-  name: string;
+  name?: string;
 
   @IsNotEmpty()
   @IsString()
