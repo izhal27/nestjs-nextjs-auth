@@ -1,0 +1,36 @@
+
+@backend = http://localhost:3001
+@contentType = application/json
+
+### POST - Signup
+
+POST {{backend}}/auth/signup HTTP/1.1
+content-type: {{contentType}}
+
+{
+    "email": "test@test.com",
+    "password": "aa"
+}
+
+### POST - Signin
+
+# @name login
+POST {{backend}}/auth/signin HTTP/1.1
+content-type: {{contentType}}
+
+{
+    "email": "test@test.com",
+    "password": "aa"
+}
+
+### GET - All Users
+
+GET {{backend}}/users HTTP/1.1
+content-type: {{contentType}}
+Authorization: Bearer {{login.response.body.accessToken}}
+
+### GET - Profile
+
+GET {{backend}}/users/profile HTTP/1.1
+content-type: {{contentType}}
+Authorization: Bearer {{login.response.body.accessToken}}
